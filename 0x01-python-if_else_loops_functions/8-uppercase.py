@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-def islower (c):
-    if ord(c) >= ord('á') and ord(c) <= ord('z'):
-        return True
-    else:
-        return False
-    
-    def uppercase(str):
-        for c in str :
-            print("{:c}".format(ord(c) if not islower(c) else ord (c) - 32), end="")
-            print("")
-
+def uppercase(str):
+    change_case = 0
+    for i in str:
+        if ord(i) >= ord('a') and ord(i) <= ord('z'):
+            change_case = 32
+        else:
+            change_case = 0
+        print('{:c}'.format(ord(i) - change_case), end="")
+    print()
