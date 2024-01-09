@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module defining the class Student based on 9-student.py"""
 
+
 class Student:
     """Represent a student."""
 
