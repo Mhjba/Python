@@ -1,12 +1,5 @@
 0x0C. Python - Almost a circle
-Python
-OOP
- By: Guillaume
- Weight: 1
- Project will start Jan 11, 2024 4:00 AM, must end by Jan 16, 2024 4:00 AM
- Checker will be released at Jan 15, 2024 4:00 PM
- Manual QA review must be done (request it when you are done with the project)
- An auto review will be launched at the deadline
+
 Background Context
 The AirBnB project is a big part of the Higher level curriculum. This project will help you be ready for it.
 
@@ -27,6 +20,7 @@ You will also learn about:
 args and kwargs
 Serialization/Deserialization
 JSON
+
 Resources
 Read or watch:
 
@@ -34,6 +28,7 @@ args/kwargs
 JSON encoder and decoder
 unittest module
 Python test cheatsheet
+
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -44,6 +39,7 @@ How to write and read a JSON file
 What is *args and how to use it
 What is **kwargs and how to use it
 How to handle named arguments in a function
+
 Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
@@ -63,6 +59,8 @@ All your modules should be documented: python3 -c 'print(__import__("my_module")
 All your classes should be documented: python3 -c 'print(__import__("my_module").MyClass.__doc__)'
 All your functions (inside and outside a class) should be documented: python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
 A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+
 Python Unit Tests
 Allowed editors: vi, vim, emacs
 All your files should end with a new line
@@ -74,9 +72,11 @@ Your file organization in the tests folder should be the same as your project: e
 All your tests should be executed by using this command: python3 -m unittest discover tests
 You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base.py
 We strongly encourage you to work together on test cases so that you don’t miss any edge case
+
+
 Tasks
 0. If it's not tested it doesn't work
-mandatory
+
 All your files, classes and methods must be unit tested and be PEP 8 validated.
 
 guillaume@ubuntu:~/$ python3 -m unittest discover tests
@@ -88,14 +88,7 @@ Ran 189 tests in 13.135s
 
 OK
 guillaume@ubuntu:~/$
-Note that this is just an example. The number of tests you create can be different from the above example.
 
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: tests/
-  
 1. Base class
 mandatory
 Write the first class Base:
@@ -140,12 +133,7 @@ guillaume@ubuntu:~/$ ./0-main.py
 12
 4
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py, models/__init__.py
-  
 2. First Rectangle
 mandatory
 Write the class Rectangle that inherits from Base:
@@ -185,12 +173,8 @@ guillaume@ubuntu:~/$ ./1-main.py
 2
 12
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
 3. Validate attributes
 mandatory
 Update the class Rectangle by adding validation of all setter methods and instantiation (id excluded):
@@ -233,12 +217,7 @@ guillaume@ubuntu:~/$ ./2-main.py
 [TypeError] x must be an integer
 [ValueError] y must be >= 0
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
 4. Area first
 mandatory
 Update the class Rectangle by adding the public method def area(self): that returns the area value of the Rectangle instance.
@@ -264,12 +243,8 @@ guillaume@ubuntu:~/$ ./3-main.py
 20
 56
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
 5. Display #0
 mandatory
 Update the class Rectangle by adding the public method def display(self): that prints in stdout the Rectangle instance with the character # - you don’t need to handle x and y here.
@@ -300,12 +275,8 @@ guillaume@ubuntu:~/$ ./4-main.py
 ##
 ##
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
 6. __str__
 mandatory
 Update the class Rectangle by overriding the __str__ method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
@@ -327,12 +298,8 @@ guillaume@ubuntu:~/$ ./5-main.py
 [Rectangle] (12) 2/1 - 4/6
 [Rectangle] (1) 1/0 - 5/5
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
 7. Display #1
 mandatory
 Update the class Rectangle by improving the public method def display(self): to print in stdout the Rectangle instance with the character # by taking care of x and y
@@ -362,12 +329,7 @@ $
  ###$
  ###$
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
 8. Update #0
 mandatory
 Update the class Rectangle by adding the public method def update(self, *args): that assigns an argument to each attribute:
@@ -412,12 +374,8 @@ guillaume@ubuntu:~/$ ./7-main.py
 [Rectangle] (89) 4/10 - 2/3
 [Rectangle] (89) 4/5 - 2/3
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
 9. Update #1
 mandatory
 Update the class Rectangle by updating the public method def update(self, *args): by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes:
@@ -457,12 +415,9 @@ guillaume@ubuntu:~/$ ./8-main.py
 [Rectangle] (89) 3/1 - 2/1
 [Rectangle] (89) 1/3 - 4/2
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
+
 10. And now, the Square!
 mandatory
 Write the class Square that inherits from Rectangle:
@@ -525,12 +480,9 @@ guillaume@ubuntu:~/$ ./9-main.py
  ###
  ###
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/square.py
- 
+
+
 11. Square size
 mandatory
 Update the class Square by adding the public getter and setter size
@@ -561,14 +513,8 @@ guillaume@ubuntu:~/$ ./10-main.py
 [Square] (1) 0/0 - 10
 [TypeError] width must be an integer
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/square.py
- 
-12. Square update
-mandatory
+
 Update the class Square by adding the public method def update(self, *args, **kwargs) that assigns attributes:
 
 *args is the list of arguments - no-keyworded arguments
@@ -620,12 +566,8 @@ guillaume@ubuntu:~/$ ./11-main.py
 [Square] (1) 12/1 - 7
 [Square] (89) 12/1 - 7
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/square.py
- 
+
 13. Rectangle instance to dictionary representation
 mandatory
 Update the class Rectangle by adding the public method def to_dictionary(self): that returns the dictionary representation of a Rectangle:
@@ -664,12 +606,8 @@ guillaume@ubuntu:~/$ ./12-main.py
 [Rectangle] (1) 1/9 - 10/2
 False
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/rectangle.py
- 
+
 14. Square instance to dictionary representation
 mandatory
 Update the class Square by adding the public method def to_dictionary(self): that returns the dictionary representation of a Square:
@@ -707,12 +645,8 @@ guillaume@ubuntu:~/$ ./13-main.py
 [Square] (1) 2/1 - 10
 False
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/square.py
- 
+
 15. Dictionary to JSON string
 mandatory
 JSON is one of the standard formats for sharing data representation.
@@ -744,12 +678,8 @@ guillaume@ubuntu:~/$ ./14-main.py
 [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
 <class 'str'>
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py
- 
+
 16. JSON string to file
 mandatory
 Update the class Base by adding the class method def save_to_file(cls, list_objs): that writes the JSON string representation of list_objs to a file:
@@ -776,12 +706,8 @@ if __name__ == "__main__":
 guillaume@ubuntu:~/$ ./15-main.py
 [{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py
- 
+
 17. JSON string to dictionary
 mandatory
 Update the class Base by adding the static method def from_json_string(json_string): that returns the list of the JSON string representation json_string:
@@ -811,12 +737,8 @@ guillaume@ubuntu:~/$ ./16-main.py
 [<class 'str'>] [{"height": 4, "width": 10, "id": 89}, {"height": 7, "width": 1, "id": 7}]
 [<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py
- 
+
 18. Dictionary to Instance
 mandatory
 Update the class Base by adding the class method def create(cls, **dictionary): that returns an instance with all attributes already set:
@@ -849,12 +771,8 @@ guillaume@ubuntu:~/$ ./17-main.py
 False
 False
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py
- 
+
 19. File to instances
 mandatory
 Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:
@@ -920,15 +838,12 @@ guillaume@ubuntu:~/$ ./18-main.py
 [139785911764976] [Square] (5) 0/0 - 5
 [139785911765032] [Square] (6) 9/1 - 7
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py
- 
+
 20. JSON ok, but CSV?
-#advanced
-Update the class Base by adding the class methods def save_to_file_csv(cls, list_objs): and def load_from_file_csv(cls): that serializes and deserializes in CSV:
+
+Update the class Base by adding the class methods def save_to_file_csv(cls, list_objs): 
+and def load_from_file_csv(cls): that serializes and deserializes in CSV:
 
 The filename must be: <Class name>.csv - example: Rectangle.csv
 Has the same behavior as the JSON serialization/deserialization
@@ -992,19 +907,17 @@ guillaume@ubuntu:~/$ ./100-main.py
 [140268695529232] [Square] (5) 0/0 - 5
 [140268695529176] [Square] (6) 9/1 - 7
 guillaume@ubuntu:~/$ 
-Repo:
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/
- 
+
 21. Let's draw it
-#advanced
-Update the class Base by adding the static method def draw(list_rectangles, list_squares): that opens a window and draws all the Rectangles and Squares:
+
+Update the class Base by adding the static method def draw(list_rectangles, list_squares):
+ that opens a window and draws all the Rectangles and Squares:
 
 You must use the Turtle graphics module
 To install it: sudo apt-get install python3-tk
-To make the GUI available outside your vagrant machine, add this line in your Vagrantfile: config.ssh.forward_x11 = true
+To make the GUI available outside your vagrant machine, add this line in your Vagrantfile: 
+config.ssh.forward_x11 = true
 No constraints for color, shape etc… be creative!
 guillaume@ubuntu:~/$ cat 101-main.py
 #!/usr/bin/python3
@@ -1025,13 +938,7 @@ guillaume@ubuntu:~/$ ./101-main.py
 Uncommented line in /etc/ssh/ssh_config that said # ForwardX11 no and change no to yes.
 Then added line config.ssh.forward_agent = true to my Vagrantfile in addition to config.ssh.forward_x11 = true.
 Halted my vm with vagrant halt and started it back up with vagrant up --provision then vagrant ssh.
-If you get an error that looks like /usr/bin/xauth: timeout in locking authority file /home/vagrant/.Xauthority, then enter rm .Xauthority (you may have to sudo).
+If you get an error that looks like /usr/bin/xauth: timeout in locking authority file 
+/home/vagrant/.Xauthority, then enter rm .Xauthority (you may have to sudo).
 Logout and restart the vm with vagrant up --provision.
 Test with xeyes. If Xquartz is installed on the Mac OS it should open in an Xquartz window.
-It is your responsibility to request a review for this task from a peer before the project’s deadline. If no peers have been reviewed, you should request a review from a TA or staff member.
-
-Repo:
-
-GitHub repository: alx-higher_level_programming
-Directory: 0x0C-python-almost_a_circle
-File: models/base.py
