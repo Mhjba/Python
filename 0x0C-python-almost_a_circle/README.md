@@ -20,7 +20,6 @@ You will also learn about:
 args and kwargs
 Serialization/Deserialization
 JSON
-
 Resources
 Read or watch:
 
@@ -28,7 +27,6 @@ args/kwargs
 JSON encoder and decoder
 unittest module
 Python test cheatsheet
-
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -39,7 +37,6 @@ How to write and read a JSON file
 What is *args and how to use it
 What is **kwargs and how to use it
 How to handle named arguments in a function
-
 Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
@@ -59,8 +56,6 @@ All your modules should be documented: python3 -c 'print(__import__("my_module")
 All your classes should be documented: python3 -c 'print(__import__("my_module").MyClass.__doc__)'
 All your functions (inside and outside a class) should be documented: python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
 A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
-
-
 Python Unit Tests
 Allowed editors: vi, vim, emacs
 All your files should end with a new line
@@ -88,6 +83,7 @@ Ran 189 tests in 13.135s
 
 OK
 guillaume@ubuntu:~/$
+
 
 1. Base class
 mandatory
@@ -133,6 +129,8 @@ guillaume@ubuntu:~/$ ./0-main.py
 12
 4
 guillaume@ubuntu:~/$ 
+
+
 
 2. First Rectangle
 mandatory
@@ -378,7 +376,8 @@ guillaume@ubuntu:~/$
 
 9. Update #1
 mandatory
-Update the class Rectangle by updating the public method def update(self, *args): by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes:
+Update the class Rectangle by updating the public method def update(self, *args):
+ by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes:
 
 **kwargs can be thought of as a double pointer to a dictionary: key/value
 As Python doesn’t have pointers, **kwargs is not literally a double pointer – describing it as such is just a way of explaining its behavior in terms you’re already familiar with
