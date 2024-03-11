@@ -1,6 +1,7 @@
 #!/usr/bin/node
 // script that prints My number
 
+
 if (isNaN(process.argv[2])) {
 	  console.log('Not a number');
 } else {
