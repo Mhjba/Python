@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 //script that prints the first argument passed
 
 if (process.argv[2] === undefined) {
