@@ -1,4 +1,4 @@
-#!/usr/bin/nodei
+#!/usr/bin/node
 //script that prints the first argument passed
 
 
