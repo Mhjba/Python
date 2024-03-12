@@ -3,9 +3,11 @@
 
 const x = Math.floor(Number(process.argv[2]));
 if (isNaN(x)) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   for (let i = 0; i < x; i++) {
-    console.log('C is fun');
+    let row = '';
+    for (let c = 0; c < x; c++) row += 'X';
+    console.log(row);
   }
 }
