@@ -2,9 +2,10 @@
 // script that searches the second biggest
 // integer in the list of arguments.
 
-if (process.argv.length <= 3) {
-  console.log(0);
-} else {
-  const list = process.argv.sort();
-  console.log(list.reverse()[1]);
+let line = 0;
+const args = process.argv.slice(2);
+if (args.length > 1) {
+  args.sort();
+  line = args[args.length - 2];
 }
+console.log(line);
