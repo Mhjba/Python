@@ -15,8 +15,5 @@ if __name__ == '__main__':
                 LIKE BINARY 'N%' ORDER BY id ASC")
     rows = cur.fetchall()
     # Display results
-    for i in rows:
-        print(i)
-    # Close the cursor and database connection
-    cur.close()
-    db.close()
+    for row in rows:
+        print(row)
