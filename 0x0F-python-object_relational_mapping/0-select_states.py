@@ -3,21 +3,18 @@
 import MySQLdb
 from sys import argv
 
-# The code should not be executed when imported
 if __name__ == '__main__':
 
-    # make a connection to the database
+    # Connect to MySQL server
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
-
-    # It gives us the ability to have multiple seperate working environments
-    # through the same connection to the database.
     cur = db.cursor()
+    # Execute query to retrieve states
     cur.execute("SELECT * FROM states")
-
     rows = cur.fetchall()
+    # Display results
     for i in rows:
         print(i)
-    # Clean up process
+    # Close the cursor and database connection
     cur.close()
     db.close()
