@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-Script that lists all State objects from the database - Using module SQLAlchemy
-"""
+""" lists all State objects from the database """
+
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import create_engine
@@ -22,4 +21,3 @@ if __name__ == "__main__":
     s_tate = session.query(State).order_by(State.id).all()
     for state in s_tate:
         print("{}: {}".format(state.id, state.name))
-    session.close()
