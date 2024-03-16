@@ -1,27 +1,24 @@
 #!/usr/bin/python3
 """
-    Module that performs MySQL query through MySQLAlchemy.
+Lists all City objects from the database hbtn_0e_101_usa
 """
 from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
-from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == '__main__':
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(argv[1], argv[2], argv[3]),
                            pool_pre_ping=True)
-
-    engine = create_engine(db_uri, pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    Base.metadata.create_all(engine)
-    for a_city in session.query(City).order_by(City.id):
-        print("{}: {} -> {}".format(
-                a_city.id, a_city.name, a_city.state.name))
+    st = session.query(State).join(City).order_by(City.id).all()
 
-    session.close()
+    for state in st:
+        for city in state.cities:
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
