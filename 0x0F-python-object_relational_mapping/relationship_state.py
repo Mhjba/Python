@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Improve the files model state"""
-
+"""
+Contains State class and Base, an instance of declarative_base()
+"""
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -13,10 +14,10 @@ class State(Base):
     """Represents a state for a MySQL database.
 
     Attributes:
-        __tablename__ : The name of the MySQL table to store States.
-        id : The state's id.
-        name : The state's name.
-        cities : The State-City relationship.
+        __tablename__ (str): The name of the MySQL table to store States.
+        id (sqlalchemy.Integer): The state's id.
+        name (sqlalchemy.String): The state's name.
+        cities (sqlalchemy.orm.relationship): The State-City relationship.
     """
     __tablename__ = 'states'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
