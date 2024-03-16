@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ lists all State objects from the database """
 
-from model_state import Base, State
 from sys import argv
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -14,9 +14,10 @@ if __name__ == "__main__":
 
     # create a configured "Session" class
     Session = sessionmaker(bind=engine)
+
+    Base.metadata.create_all(engine)
     # create a Session
     session = Session()
-    Base.metadata.create_all(engine)
 
     s_tate = session.query(State).order_by(State.id).all()
     for state in s_tate:
