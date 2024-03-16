@@ -20,3 +20,4 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     state_update = session.query(State).filter_by(id='2').first()
     state_update.name = "New Mexico"
+    session.commit()
