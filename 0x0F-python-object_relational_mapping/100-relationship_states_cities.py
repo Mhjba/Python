@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Creates the State "California" with the City "San Francisco" from a DB"""
-import sys
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy import create_engine
@@ -9,8 +9,10 @@ from sqlalchemy.schema import Table
 
 if __name__ == "__main__":
 
+    # Create an engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+        argv[1], argv[2], argv[3]),
+        pool_pre_ping=True)
 
     session = Session(engine)
     Base.metadata.create_all(engine)

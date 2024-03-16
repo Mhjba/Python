@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-Contains the class definition of a City
-"""
+""" Improve the files model City """
+
 from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
@@ -11,9 +10,9 @@ class City(Base):
     """Represents a city for a MySQL database.
 
     Attributes:
-        id (sqlalchemy.Column): The city's id.
-        name (sqlalchemy.Column): The city's name.
-        state_id (sqlalchemy.Column): The city's state id.
+        id : The city's id.
+        name : The city's name.
+        state_id : The city's state id.
     """
     __tablename__ = 'cities'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
