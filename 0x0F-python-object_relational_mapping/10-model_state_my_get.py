@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Prints the State object with the name passed as argument from the db
+prints the State object with the name passed as argument
+from the database
 """
 
 from sys import argv
@@ -14,9 +15,9 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
     # Create a configured "Session" class
     Session = sessionmaker(bind=engine)
-    Base.metadata.create_all(engine)
-        # Create a Session
+    # Create a Session
     session = Session()
+    Base.metadata.create_all(engine)
 
     state = session.query(State).filter(State.name == argv[4]).first()
 
