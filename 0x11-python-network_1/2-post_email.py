@@ -12,7 +12,7 @@ from sys import argv
 if __name__ == "__main__":
     url = argv[1]
     value = {"email": argv[2]}
-    data = parse.urlencode(value).encode("ascii")
+    data = parse.urlencode(value).encode("utf-8")
 
     request = req.Request(url, data)
     with req.urlopen(request) as response:
