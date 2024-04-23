@@ -7,7 +7,7 @@ const url_data = `https://swapi-api.alx-tools.com/api/films/${id_data}`;
 
 request(url_data, (error, response, body) => {
   if (error) {
-    console.error(er);
+    console.error(error);
   }
   console.log(JSON.parse(body).title);
 });
