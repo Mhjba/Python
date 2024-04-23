@@ -7,15 +7,15 @@ request.get(url_data + id_data, function (error, response, body) {
   if (error) {
     console.log(error);
   }
-  const dt = JSON.parse(body);
-  const todos = dt.characters;
+  const data = JSON.parse(body);
+  const todos = data.characters;
   for (const i of todos) {
     request.get(i, function (error, response, bodys) {
       if (error) {
         console.log(error);
       }
-      const data = JSON.parse(bodys);
-      console.log(data.name);
+      const u_data = JSON.parse(bodys);
+      console.log(u_data.name);
     });
   }
 });
