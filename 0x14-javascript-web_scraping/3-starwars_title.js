@@ -2,10 +2,10 @@
 const request = require('request');
 
 const process = require('process');
-const id_data = process.argv[2];
-const url_data = `https://swapi-api.alx-tools.com/api/films/${id_data}`;
+const data_id = process.argv[2];
+const data_url = `https://swapi-api.alx-tools.com/api/films/${data_id}`;
 
-request(url_data, (error, response, body) => {
+request(data_url, (error, response, body) => {
   if (error) {
     console.error(error);
   }
